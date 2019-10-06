@@ -1,6 +1,11 @@
 @keyframes rotation {
-  0% {transform: rotate(0deg) translate(-50%, -50%);}
-  100% {transform: rotate(360deg) translate(-50%, -50%)}
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%)
+  }
 }
 
 @font-face {
@@ -14,11 +19,9 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   cursor: url('watermelon.png'), auto;
-
   background-image: url('background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-
   font-family: 'Asap';
   color: #fff;
   font-size: 12px;
@@ -102,7 +105,6 @@ label {
 
 .column-2 {
   width: 35vw;
-
   margin-left: 2vw;
   /* padding: 50px 100px 60px 40px;*/
 }
@@ -114,13 +116,11 @@ label {
   border-radius: 15px;
   margin-bottom: 40px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   position: relative;
   z-index: 3;
 }
@@ -178,10 +178,12 @@ button {
 
 .text-scroll {
   width: 85%;
-  height: 80%;
+  height: 82%;
   position: absolute;
-  top: 35px;
-  left: 35px;
+  top: 10%;
+  /*35px*/
+  left: 7%;
+  /*35px*/
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -250,32 +252,33 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-
 }
 
 .stamps img {
   position: absolute;
   animation: rotation 30s linear infinite;
-
 }
 
-@media (min-width: 1900px)  {
+@media (min-width: 2300px) {
   .column-2 {
-    width: 25vw;
+    width: 15vw;
   }
-
-
 }
 
-@media (min-width: 1500px) and (max-width: 1900px) {
+@media (min-width: 1900px) {
+  .column-2 {
+    width: 20vw;
+  }
+}
+
+/* MEDIA QUERIES PORTRAIT */
+@media (min-width: 1500px) and (max-width: 1900px) and (orientation: portrait) {
   .column-2 {
     width: 30vw;
   }
-
-
 }
 
-@media (min-width: 700px) and (max-width: 1250px) {
+@media (min-width: 740px) and (max-width: 1250px) and (orientation: portrait) {
   body {
     background-size: auto;
   }
@@ -303,7 +306,6 @@ footer {
   }
 
   form {
-
     width: 80%;
   }
 
@@ -347,12 +349,19 @@ footer {
   }
 }
 
+@media (min-width: 1000px) {
+  form {
+    width: 85%;
+  }
 
+  .register-form-window {
+    height: 180px;
+  }
+}
 
-@media (min-width: 200px) and (max-width: 700px) {
+@media (min-width: 200px) and (max-width: 740px) and (orientation: portrait) {
   body {
     background-size: auto;
-
   }
 
   .landing {
@@ -369,6 +378,7 @@ footer {
     width: 85%;
     margin-bottom: 25px;
   }
+
   .column-2 {
     width: 80vw;
   }
@@ -387,7 +397,6 @@ footer {
     margin: 0 auto;
     font-size: 11px;
     padding: 4vh 0 4vh 0;
-
   }
 
   .condition-2 img {
@@ -414,9 +423,9 @@ footer {
     width: 100%;
     height: 50vh;
   }
+
   .logos {
     max-width: 77%;
-
   }
 
   .logos img {
@@ -440,19 +449,204 @@ footer {
   }
 
   form {
-    top: 25px;
-    left: 25px;
+    /*top: 25px;
+    left: 25px;*/
+    top: 15%;
+    left: 10%;
   }
 
   footer {
     margin-top: 2vh;
   }
-
 }
 
-@media (min-width: 376px) and (max-width: 450px) {
+@media (min-width: 376px) and (max-width: 450px) and (orientation: portrait) {
   .logos {
-
     margin: 0 20vw;
+  }
+}
+
+/* MEDIA QUERIES LANDSCAPE */
+@media (min-width: 1500px) and (max-width: 1900px) and (orientation: landscape) {
+  .column-2 {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1250px) and (orientation: landscape) {
+  body {
+    background-size: auto;
+  }
+
+  .landing {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-1 {
+    width: 60vw;
+    margin-bottom: 25px;
+  }
+
+  .column-2 {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .register-form-window {
+    margin-right: 2vw;
+    height: 250px;
+  }
+
+  form {
+    top: 15%;
+    left: 15%;
+    width: 80%;
+  }
+
+  select, input {
+    width: 80%;
+  }
+
+  .terms-and-conditions {
+    margin-left: 2vw;
+    height: 250px;
+  }
+
+  .condition-1 {
+    display: none;
+  }
+
+  .condition-2 {
+    width: 75vw;
+    /*height: 15vh;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px auto;
+    font-size: 15px;
+  }
+
+  .logos {
+    max-width: 80%;
+  }
+
+  .logos img {
+    max-height: 30px;
+    margin: 5px 10px;
+  }
+
+  .logos img:nth-child(4) {
+    max-height: 10px;
+    margin-bottom: 15px;
+  }
+
+  .logos img:nth-child(6) {
+    max-width: 90px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 700px) and (orientation: landscape) {
+  body {
+    background-size: auto;
+  }
+
+  .landing {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .column-1 {
+    width: 60vw;
+  }
+
+  .slots {
+    width: 85%;
+    margin-bottom: 25px;
+  }
+
+  .column-2 {
+    width: 80vw;
+  }
+
+  .condition-1 {
+    display: none;
+  }
+
+  .condition-2 {
+    width: 90vw;
+    /*height: 15vh;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 auto;
+    font-size: 11px;
+    padding: 8vh 0 8vh 0;
+  }
+
+  .condition-2 img {
+    width: 40px;
+  }
+
+  select,
+  input {
+    width: 60%;
+    font-size: 12px;
+    margin-left: 10;
+  }
+
+  select {
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+
+  .register-form-window {
+    height: 160px;
+  }
+
+  .terms-and-conditions {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .logos {
+    max-width: 85%;
+  }
+
+  .logos img {
+    max-height: 20px;
+    margin: 5px 10px;
+  }
+
+  .logos img:nth-child(4) {
+    max-height: 10px;
+    margin-bottom: 10px;
+  }
+
+  .logos img:nth-child(6) {
+    max-width: 90px;
+    margin-bottom: 10px;
+  }
+
+  .text-scroll {
+    top: 10%;
+    left: 10%;
+    width: 80%;
+  }
+
+  form {
+    top: 15%;
+    left: 25%;
+    width: 60%;
+  }
+
+  footer {
+    margin-top: 2vh;
   }
 }
